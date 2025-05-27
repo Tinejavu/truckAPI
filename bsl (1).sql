@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2025 at 06:11 PM
+-- Generation Time: May 27, 2025 at 01:53 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -147,9 +147,9 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', '2025-05-26 07:54:45', '2025-05-26 07:54:45'),
-(2, 'Driver', '2025-05-26 07:54:45', '2025-05-26 07:54:45'),
-(3, 'Staff', '2025-05-26 07:54:45', '2025-05-26 07:54:45');
+(1, 'Admin', '2025-05-26 08:11:43', '2025-05-26 08:11:43'),
+(2, 'Driver', '2025-05-26 08:11:43', '2025-05-26 08:11:43'),
+(3, 'Staff', '2025-05-26 08:11:43', '2025-05-26 08:11:43');
 
 -- --------------------------------------------------------
 
@@ -202,6 +202,17 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `first_name`, `middle_name`, `last_name`, `email`, `email_verified_at`, `password`, `role_id`, `user_status_id`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Test', NULL, 'Test', 'test@gmail.com', NULL, '$2y$10$QxupU.SsHlzPYxg/qCbOweyYn79Dve3vb0zxYodkuvc.4EE2by73i', 3, 1, NULL, '2025-05-27 02:43:49', '2025-05-27 02:43:49'),
+(2, 'Test', NULL, 'Test', 'test1@gmail.com', NULL, '$2y$10$fOBmttz84/T6yK8xM2/XD.rn/6f4Bkuh8vfesVYQM0NnNzGdjpSZ.', 3, 1, NULL, '2025-05-27 02:45:36', '2025-05-27 02:45:36'),
+(3, 'Ivan', NULL, 'Dela Cerna', 'ivandelacerna@gmail.com', NULL, '$2y$10$oARSrUCJNxIFcDvYMOmeluKzvoig82zUQd6/j39nVPayphxRV3P2W', 3, 1, NULL, '2025-05-27 03:15:33', '2025-05-27 03:15:33'),
+(4, 'Test', NULL, 'Test', 'test3@gmail.com', NULL, '$2y$10$gv2dwQ/ia1NOMYDl9WVkM.L9LmYXUDKW..zIMesfexi.aPGc3DIli', 3, 1, NULL, '2025-05-27 03:21:24', '2025-05-27 03:21:24'),
+(5, 'JAke', NULL, 'Paragat', 'ivandelacerna1@gmail.com', NULL, '$2y$10$3McsZa8Ij8kz9/o4cEjJ5uVx/vS17YBJLuxzegoUNeqXjLSJRqstu', 3, 1, NULL, '2025-05-27 03:29:10', '2025-05-27 03:29:10');
+
 -- --------------------------------------------------------
 
 --
@@ -220,8 +231,8 @@ CREATE TABLE `user_statuses` (
 --
 
 INSERT INTO `user_statuses` (`id`, `status_name`, `created_at`, `updated_at`) VALUES
-(1, 'Active', '2025-05-26 07:54:46', '2025-05-26 07:54:46'),
-(2, 'Inactive', '2025-05-26 07:54:46', '2025-05-26 07:54:46');
+(1, 'Active', '2025-05-26 08:11:43', '2025-05-26 08:11:43'),
+(2, 'Inactive', '2025-05-26 08:11:43', '2025-05-26 08:11:43');
 
 --
 -- Indexes for dumped tables
@@ -328,7 +339,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `reporting`
@@ -358,7 +369,7 @@ ALTER TABLE `trip_processing`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user_statuses`

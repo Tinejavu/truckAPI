@@ -44,26 +44,5 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::delete('/processings/{processing}', [TripProcessingController::class, 'destroyForTrip']);
     });
 
-    // Settings routes
-    Route::get('/settings', [SettingController::class, 'index']);
-    Route::post('/settings', [SettingController::class, 'store']);
-    Route::get('/settings/{id}', [SettingController::class, 'show']);
-    Route::put('/settings/{id}', [SettingController::class, 'update']);
-    Route::delete('/settings/{id}', [SettingController::class, 'destroy']);
-
-    // Reporting routes
-    Route::get('/reporting', [ReportingController::class, 'index']);
-    Route::post('/reporting', [ReportingController::class, 'store']);
-    Route::get('/reporting/{id}', [ReportingController::class, 'show']);
-    Route::put('/reporting/{id}', [ReportingController::class, 'update']);
-    Route::delete('/reporting/{id}', [ReportingController::class, 'destroy']);
-
-    // Roles routes
-    Route::get('/roles', [RoleController::class, 'index']);
-    Route::post('/roles', [RoleController::class, 'store']);
-    Route::get('/roles/{id}', [RoleController::class, 'show']);
-    Route::put('/roles/{id}', [RoleController::class, 'update']);
-    Route::delete('/roles/{id}', [RoleController::class, 'destroy']);
-
     Route::post('/logout', [AuthenticationController::class, 'logout']);
 });
